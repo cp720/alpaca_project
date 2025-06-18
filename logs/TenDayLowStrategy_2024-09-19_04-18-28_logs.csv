@@ -1,0 +1,24 @@
+2024-09-19 04:18:28,755: asyncio: INFO: [TenDayLowStrategy] Executing the initialize lifecycle method
+2024-09-19 04:18:30,366: root: INFO: Current backtesting datetime 2024-01-02 08:30:00-05:00
+2024-09-19 04:18:30,367: asyncio: INFO: [TenDayLowStrategy] Executing the before_market_opens lifecycle method
+2024-09-19 04:18:30,369: root: INFO: Current backtesting datetime 2024-01-02 09:30:00-05:00
+2024-09-19 04:18:30,369: asyncio: INFO: [TenDayLowStrategy] Executing the before_starting_trading lifecycle method
+2024-09-19 04:18:30,371: asyncio: ERROR: [TenDayLowStrategy] 'int' object is not subscriptable
+2024-09-19 04:18:30,374: asyncio: ERROR: [TenDayLowStrategy] Traceback (most recent call last):
+  File "C:\Users\chamu\anaconda3\envs\trader\lib\site-packages\lumibot\strategies\strategy_executor.py", line 911, in run
+    self._run_trading_session()
+  File "C:\Users\chamu\anaconda3\envs\trader\lib\site-packages\lumibot\strategies\strategy_executor.py", line 859, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\chamu\anaconda3\envs\trader\lib\site-packages\lumibot\strategies\strategy_executor.py", line 262, in func_output
+    result = func_input(self, *args, **kwargs)
+  File "C:\Users\chamu\anaconda3\envs\trader\lib\site-packages\lumibot\strategies\strategy_executor.py", line 286, in func_output
+    result = func_input(self, *args, **kwargs)
+  File "C:\Users\chamu\anaconda3\envs\trader\lib\site-packages\lumibot\strategies\strategy_executor.py", line 346, in _on_trading_iteration
+    sleep_units = self.strategy.sleeptime[-1].lower()
+TypeError: 'int' object is not subscriptable
+
+2024-09-19 04:18:30,376: asyncio: INFO: [TenDayLowStrategy] Executing the on_bot_crash event method
+2024-09-19 04:18:30,390: root: INFO: Backtesting finished
+2024-09-19 04:18:31,607: asyncio: WARNING: [TenDayLowStrategy] Cannot plot returns because the strategy returns are missing
+2024-09-19 04:18:31,815: asyncio: WARNING: [TenDayLowStrategy] Cannot create a tearsheet because the strategy returns are missing
+2024-09-19 04:18:31,815: backtest_stats: INFO: Backtest took 0:00:03.062121 for a speed of 0.000

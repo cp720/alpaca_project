@@ -1,0 +1,7 @@
+lumibot
+alpaca_trade_api
+pandas
+yfinance
+numpy
+matplotlib
+python-dotenv
