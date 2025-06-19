@@ -41,13 +41,15 @@ Logs and settings files are saved under the `logs/` directory.
 .
 ├── main.py               # Entrypoint for running strategies
 ├── strategies/           # Base strategy classes
-├── ten_day_low_strategy.py   # E strategy script
+  ├── base_strategy.py
+├── ten_day_low_strategy.py   # Ten strategy script
 ├── utils/                # Helper utilities
+  ├── trading_utils.py    
 ├── requirements.txt      # Python dependencies
 └── logs/                 # Generated log files
 ```
 
 ## Disclaimer
 
-This code is provided for educational purposes only. 
+Project is ongoing. Logic for momentum_strategy.py module will be added next.
 
