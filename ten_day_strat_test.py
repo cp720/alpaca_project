@@ -2,12 +2,14 @@ import alpaca_trade_api as tradeapi
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 from matplotlib.backends.backend_pdf import PdfPages
+from dotenv import load_dotenv
 
-# Replace with your actual API keys or use environment variables
-API_KEY = "PKOH86N9W4LEUJ0S20HN"
-API_SECRET = "tKth4PQSDDfgr05DAaAtUWqomrcNIvzkUdnbSjPS"
-BASE_URL = "https://paper-api.alpaca.markets/"
+# Load API credentials from environment variables
+API_KEY = os.getenv("ALPACA_API_KEY")
+API_SECRET = os.getenv("ALPACA_API_SECRET")
+BASE_URL = os.getenv("ALPACA_BASE_URL", "https://paper-api.alpaca.markets/")
 
 # Initialize Alpaca API (for fetching historical data)
 api = tradeapi.REST(API_KEY, API_SECRET, base_url=BASE_URL, api_version='v2')
